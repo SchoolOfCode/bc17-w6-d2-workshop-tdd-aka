@@ -1,17 +1,17 @@
 import { calculateScrabbleScore } from "./scrabble-score";
-
 import { expect, test } from "vitest";
 
 test('should return 1 for letter A', () => {
   expect(calculateScrabbleScore('A')).toBe(1);
 });
+
 test('should return 3 for letter B', () => {
   expect(calculateScrabbleScore('B')).toBe(3);
 });
 test('should return 3 for letter C', () => {
   expect(calculateScrabbleScore('C')).toBe(3);
 });
-test.only('should return 2 for letter D', () => {
+test('should return 2 for letter D', () => {
   expect(calculateScrabbleScore('D')).toBe(2);
 });
 test('should return 1 for letter E', () => {
@@ -80,3 +80,14 @@ test('should return 4 for letter Y', () => {
 test('should return 10 for letter Z', () => {
   expect(calculateScrabbleScore('Z')).toBe(10);
 });
+
+
+
+// TEST EACH (NOT FULLY COMPLETE, TABLE SHOULD HAVE ALL LETTERS)
+
+// test.each([
+//   ['A', 1],
+//   ['B', 3]
+// ])('TRYING OUT TEST EACH', (letter, expected) => {
+//   expect(calculateScrabbleScore(letter)).toBe(expected)
+// })
